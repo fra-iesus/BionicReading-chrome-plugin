@@ -2,13 +2,13 @@
   "use strict" ;
 
   function bionizeWord (inputWord) {
-    var letters = inputWord.match(/([^ .,;]+)/g);
+    var letters = inputWord.match(/([^ .,;!\?\"]+)/g);
     if (letters) {
       letters = letters[0];
     } else {
       letters = '';
     }
-    var separator = inputWord.match(/([ .,;]+)/g);
+    var separator = inputWord.match(/([ .,;!\?\"]+)/g);
     if (separator) {
       separator = separator[0];
     } else {
@@ -21,7 +21,7 @@
   function bionizeElement (el) {
     var inputTextBlock = el.textContent;
     var outputTextBlock = '';
-    var words = inputTextBlock.replace(/([ .,;]+)/g,'$1§-bionized-separator-§').split('§-bionized-separator-§');
+    var words = inputTextBlock.replace(/([ .,;!\?\"]+)/g,'$1§-bionized-separator-§').split('§-bionized-separator-§');
     if (words) {
       for (var wordsIdx = 0; wordsIdx < words.length; wordsIdx++) {
         var bionizedWord = bionizeWord(words[wordsIdx]);
