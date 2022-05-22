@@ -21,7 +21,7 @@
   function bionizeElement (el) {
     var inputTextBlock = el.textContent;
     var outputTextBlock = '';
-    var words = inputTextBlock.replace(/([ .,;]+)/g,'$1§sep§').split('§sep§');
+    var words = inputTextBlock.replace(/([ .,;]+)/g,'$1§-bionized-separator-§').split('§-bionized-separator-§');
     if (words) {
       for (var wordsIdx = 0; wordsIdx < words.length; wordsIdx++) {
         var bionizedWord = bionizeWord(words[wordsIdx]);
@@ -66,7 +66,6 @@
   }
   function updateOnChange (ev) {
     if (event.animationName == 'nodeInserted' &&  (!event.target.classList || !event.target.classList.contains('bionized'))) {
-      //console.log(event.target);
       bionizeHTML(event.target);
     }
   }

@@ -44,11 +44,12 @@
 } 
 
 span.bionized {
+    all: revert;
     font-weight: bold;
 }
 
 span.bionized.wrapper {
-    font-weight: normal;
+    all: revert;
 }
 
 *:not(span.bionized) {
