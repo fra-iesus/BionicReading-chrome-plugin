@@ -10,7 +10,7 @@
        "32": "icons/32.png"
   },
   "content_scripts": [
-    { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_start" }
+    { "matches": ["<all_urls>"], "js": ["js/content.js"], "css": ["css/main.css"], "run_at": "document_start" }
   ],
   "host_permissions": [
     "*://*/*"
