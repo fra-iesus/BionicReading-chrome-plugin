@@ -2,7 +2,7 @@
   "name": "BionicReading",
   "version": "0.2",
   "manifest_version": 3,
-  "description": "Bionic Reading",
+  "description": "Simple plugin to convert website content to the Bionic Reading form on the fly",
   "homepage_url": "https://github.com/fra-iesus/BionicReading-chrome-plugin",
   "minimum_chrome_version": "21",
   "icons": {
