@@ -1,0 +1,18 @@
+{
+  "name": "BionicReading",
+  "version": "0.2",
+  "manifest_version": 3,
+  "description": "Bionic Reading",
+  "homepage_url": "https://github.com/fra-iesus/BionicReading-chrome-plugin",
+  "minimum_chrome_version": "21",
+  "icons": {
+       "128": "icons/128.png",
+       "32": "icons/32.png"
+  },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_start" }
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
+}
