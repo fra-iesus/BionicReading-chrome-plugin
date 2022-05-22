@@ -31,7 +31,7 @@
     var replacementNode = document.createElement('span');
     replacementNode.className = 'bionized wrapper';
     replacementNode.innerHTML = outputTextBlock;
-    el.parentNode.classList.add("bionized");
+    //el.parentNode.classList.add("bionized");
     el.parentNode.insertBefore(replacementNode, el);
     el.parentNode.removeChild(el);
     return;
